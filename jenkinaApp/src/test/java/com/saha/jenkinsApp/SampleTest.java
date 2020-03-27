@@ -17,6 +17,7 @@ public class SampleTest {
 	 * @throws java.lang.Exception
 	 */
 
+	//com.saha.jenkinsApp.Sample s = null;
 	Sample s = null;
 
 	@BeforeClass
