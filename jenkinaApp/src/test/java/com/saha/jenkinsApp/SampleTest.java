@@ -50,7 +50,7 @@ public class SampleTest {
 	 */
 	@Test
 	public void testAdd() {
-		assertEquals(6, s.add(4, 2));
+		assertEquals(7, s.add(4, 2));
 		// fail("Not yet implemented");
 	}
 
