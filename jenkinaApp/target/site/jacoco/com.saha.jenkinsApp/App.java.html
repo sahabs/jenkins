@@ -2,6 +2,7 @@
 
 import java.net.*;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
@@ -10,24 +11,39 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Hello world!
  *
  */
-<span class="nc" id="L13">public class App {</span>
+<span class="nc" id="L14">public class App {</span>
 	public static void main(String[] args) {
-<span class="nc" id="L15">		System.out.println(&quot;Hello World!&quot;);</span>
-<span class="nc" id="L16">		System.out.println(&quot;Tightly coupled RAW vehicle!&quot;);</span>
-<span class="nc" id="L17">		Vehicle v = new Car();</span>
-<span class="nc" id="L18">		v.drive();</span>
+
+<span class="nc" id="L17">		System.out.println(&quot;Hello World!&quot;);</span>
+<span class="nc" id="L18">		System.out.println(&quot;Tightly coupled RAW vehicle!&quot;);</span>
+<span class="nc" id="L19">		Vehicle v = new Car();</span>
+<span class="nc" id="L20">		v.drive();</span>
 		
-<span class="nc" id="L20">		System.out.println(&quot;Loosely coupled Spring vehicle!&quot;);</span>
-<span class="nc" id="L21">		ApplicationContext appContext = new ClassPathXmlApplicationContext(&quot;spring.xml&quot;);</span>
-<span class="nc" id="L22">		Vehicle v1 = (Vehicle) appContext.getBean(&quot;vehicle&quot;);</span>
-<span class="nc" id="L23">		v1.drive();</span>
+<span class="nc" id="L22">		System.out.println(&quot;Loosely coupled Spring vehicle (Bike.class)!&quot;);</span>
+<span class="nc" id="L23">		ApplicationContext factory = new AnnotationConfigApplicationContext(AnnotationConfig.class);</span>
+<span class="nc" id="L24">		v = (Vehicle) factory.getBean(Bike.class);</span>
+<span class="nc" id="L25">		v.drive();	</span>
+		
+<span class="nc" id="L27">		System.out.println(&quot;Loosely coupled PRIMARY Spring vehicle (Vehicle.class)!&quot;);</span>
+<span class="nc" id="L28">		v = (Vehicle) factory.getBean(Vehicle.class);</span>
+<span class="nc" id="L29">		v.drive();		</span>
+		
+<span class="nc" id="L31">		System.out.println(&quot;Loosely coupled Spring vehicle (xml config)!&quot;);</span>
+<span class="nc" id="L32">		ApplicationContext appContext = new ClassPathXmlApplicationContext(&quot;spring.xml&quot;);</span>
+<span class="nc" id="L33">		Vehicle v1 = (Vehicle) appContext.getBean(&quot;vehicle&quot;);</span>
+<span class="nc" id="L34">		v1.drive();</span>
+<span class="nc" id="L35">		System.out.println(v1);</span>
+		
+<span class="nc" id="L37">		System.out.println(&quot;Loosely coupled Spring vehicle(annotation config)!&quot;);</span>
+<span class="nc" id="L38">		Vehicle v2 = (Vehicle) appContext.getBean(&quot;train&quot;);</span>
+<span class="nc" id="L39">		v2.drive();</span>
 		
 		try {
-<span class="nc" id="L26">			InetAddress address = InetAddress.getLocalHost();</span>
-<span class="nc" id="L27">			System.out.println(address);</span>
-<span class="nc" id="L28">		} catch (UnknownHostException ex) {</span>
-<span class="nc" id="L29">			System.out.println(&quot;Could not find this computer's address.&quot;);</span>
-		}
-<span class="nc" id="L31">	}</span>
+<span class="nc" id="L42">			InetAddress address = InetAddress.getLocalHost();</span>
+<span class="nc" id="L43">			System.out.println(address);</span>
+<span class="nc" id="L44">		} catch (UnknownHostException ex) {</span>
+<span class="nc" id="L45">			System.out.println(&quot;Could not find this computer's address.&quot;);</span>
+<span class="nc" id="L46">		}</span>
+<span class="nc" id="L47">	}</span>
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

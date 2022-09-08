@@ -1,5 +1,9 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-jenkinaApp,com.saha.jenkinsApp,App,41,0,0,0,14,0,2,0,2,0
-jenkinaApp,com.saha.jenkinsApp,Bike,7,0,0,0,3,0,2,0,2,0
+jenkinaApp,com.saha.jenkinsApp,App,84,0,0,0,26,0,2,0,2,0
+jenkinaApp,com.saha.jenkinsApp,Tyre,25,0,0,0,6,0,4,0,4,0
+jenkinaApp,com.saha.jenkinsApp,Bike,26,0,0,0,7,0,4,0,4,0
 jenkinaApp,com.saha.jenkinsApp,Sample,0,20,0,0,0,6,0,5,0,5
-jenkinaApp,com.saha.jenkinsApp,Car,7,0,0,0,3,0,2,0,2,0
+jenkinaApp,com.saha.jenkinsApp,Train,7,0,0,0,3,0,2,0,2,0
+jenkinaApp,com.saha.jenkinsApp,AnnotationConfig,3,0,0,0,1,0,1,0,1,0
+jenkinaApp,com.saha.jenkinsApp,BikeTyre,13,0,0,0,5,0,3,0,3,0
+jenkinaApp,com.saha.jenkinsApp,Car,44,0,0,0,14,0,8,0,8,0
